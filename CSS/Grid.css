@@ -1,0 +1,129 @@
+.oponents-container, .favourites-container, .tactics-container
+{
+    display:grid;
+    justify-items: center;
+    justify-content: center;
+    grid-row-gap: 15px;
+    grid-column-gap: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+.oponent-1 { grid-row:1/2; }
+.oponent-2 { grid-row:2/3; }
+.oponent-3 { grid-row:3/4; }
+
+.pieces-container
+{
+    display:grid;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 15px;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.piece-1 { grid-column: 1/2; grid-row: 1/2; }
+.piece-2 { grid-column: 2/3; grid-row: 1/2; }
+.piece-3 { grid-column: 1/2; grid-row: 2/3; }
+.piece-4 { grid-column: 2/3; grid-row: 2/3; }
+.piece-5 { grid-column: 1/2; grid-row: 3/4; }
+.piece-6 { grid-column: 2/3; grid-row: 3/4; }
+
+.tactic-1 { grid-row:1/2; }
+.tactic-2 { grid-row:2/3; }
+.tactic-3 { grid-row:3/4; }
+
+.moments-containter
+{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    grid-row-gap: 25px;
+    grid-column-gap: 15px;
+}
+
+.moment-1 { grid-row: 1/2; }
+.moment-2 { grid-row: 2/3; }
+.moment-3 { grid-row: 3/4; }
+.moment-4 { grid-row: 4/5; }
+.moment-5 { grid-row: 5/6; }
+.moment-6 { grid-row: 6/7; }
+
+@media (min-width: 768px)
+{
+    .oponents-container, .favourites-container
+    {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+    }
+    .oponent-1 { grid-column: 1/2; grid-row:1; }
+    .oponent-2 { grid-column: 2/3; grid-row:1; }
+    .oponent-3 { grid-column: 3/4; grid-row:1; }
+
+    .pieces-container
+    {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .piece-1 { grid-column: 1/2; grid-row: 1/2; }
+    .piece-2 { grid-column: 2/3; grid-row: 1/2; }
+    .piece-3 { grid-column: 3/4; grid-row: 1/2; }
+    .piece-4 { grid-column: 1/2; grid-row: 2/3; }
+    .piece-5 { grid-column: 2/3; grid-row: 2/3; }
+    .piece-6 { grid-column: 3/4; grid-row: 2/3; }
+
+    .pawn-moves-container, .king-moves-container, .light-pieces-container, .tactics-container
+    {
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+    }
+    .pawn-1, .king-1, .pieces-rules:nth-child(2) { grid-column: 1/2; grid-row: 1/2; }
+    .pawn-2, .king-2, .pieces-rules:nth-child(3) { grid-column: 2/3; grid-row: 1/2; }
+    .pawn-3, .king-3, .pieces-rules:nth-child(4) { grid-column: 3/4; grid-row: 1/2; }
+
+    .taking-container
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .taking-1 { grid-column: 1/2; grid-row: 1/2; }
+    .taking-2 { grid-column: 2/3; grid-row: 1/2; }
+    .taking-3 { grid-column: 3/4; grid-row: 1/2; }
+    .taking-4 { grid-column: 1/2; grid-row: 2/3; }
+    .taking-5 { grid-column: 2/3; grid-row: 2/3; }
+    .taking-6 { grid-column: 3/4; grid-row: 2/3; }
+    .taking-7 { grid-column: 1/2; grid-row: 3/4; }
+    .taking-8 { grid-column: 2/3; grid-row: 3/4; }
+    .taking-9 { grid-column: 3/4; grid-row: 3/4; }
+
+    .tactic-1 { grid-column: 1/2; grid-row: 1/2; }
+    .tactic-2 { grid-column: 2/3; grid-row: 1/2; }
+    .tactic-3 { grid-column: 3/4; grid-row: 1/2; }
+
+    .moments-containter { grid-template-columns:repeat(2,1fr); grid-template-rows: repeat(3,1fr); }
+    .moment-1 { grid-column: 1/2; grid-row: 1/2; }
+    .moment-2 { grid-column: 2/3; grid-row: 1/2; }
+    .moment-3 { grid-column: 1/2; grid-row: 2/3; }
+    .moment-4 { grid-column: 2/3; grid-row: 2/3; }
+    .moment-5 { grid-column: 1/2; grid-row: 3/4; }
+    .moment-6 { grid-column: 2/3; grid-row: 3/4; }
+}
+@media (min-width: 1024px)
+{
+    .pieces-container
+    {
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: 1fr;
+    }
+    .piece-1 { grid-column: 1/2; grid-row: 1/2; }
+    .piece-2 { grid-column: 2/3; grid-row: 1/2; }
+    .piece-3 { grid-column: 3/4; grid-row: 1/2; }
+    .piece-4 { grid-column: 4/5; grid-row: 1/2; }
+    .piece-5 { grid-column: 5/6; grid-row: 1/2; }
+    .piece-6 { grid-column: 6/7; grid-row: 1/2; }
+}
